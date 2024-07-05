@@ -5,6 +5,9 @@ import lombok.Data;
 import org.springframework.core.SpringVersion;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -18,6 +21,8 @@ public abstract class Pessoa implements Serializable {
     private String nome;
     private String email;
     private String telefone;
+    @OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Endereco> enderecos = new ArrayList<Endereco>();
 
 
 }
