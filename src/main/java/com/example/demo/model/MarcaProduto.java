@@ -19,7 +19,10 @@ public class MarcaProduto  implements Serializable {
     @Id
     private Long id;
 
+    @Column(nullable = false) // vai ser obrigatório
     private String nomeDesc;
+
+
 
 
 
