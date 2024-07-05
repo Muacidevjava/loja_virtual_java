@@ -10,4 +10,5 @@ public class LojaVirtualJavaApplication {
 		SpringApplication.run(LojaVirtualJavaApplication.class, args);
 	}
 
+
 }
