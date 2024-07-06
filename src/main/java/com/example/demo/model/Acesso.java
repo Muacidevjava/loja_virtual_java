@@ -2,12 +2,18 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "acesso")
 @SequenceGenerator(name = "seq_acesso", sequenceName = "seq_acesso", initialValue = 1, allocationSize = 1)
 @Data
+@Getter
+@Setter
+@EqualsAndHashCode
 public class Acesso implements GrantedAuthority {
       private static final long SerialVersionUID = 1;
     @Id
