@@ -13,6 +13,7 @@ import java.io.Serializable;
 @SequenceGenerator(name = "seq_endereco", sequenceName = "seq_endereco", allocationSize = 1, initialValue = 1)
 @Data
 public class Endereco implements Serializable {
+
     @Serial
     private static final long serialVersionUID = 1L;
 
