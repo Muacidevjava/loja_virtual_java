@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.example.demo.enums.TipoEndereco;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,7 +19,8 @@ public class Endereco implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator ="seq_endereco" )
     @Id
     private Long id;
-
+   @Enumerated(EnumType.STRING)
+    private TipoEndereco tipoEndereco;
      private String ruaLogra;
      private String cep;
      private String numero;
