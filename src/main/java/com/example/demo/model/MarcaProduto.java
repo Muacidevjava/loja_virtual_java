@@ -12,7 +12,7 @@ import java.io.Serializable;
 @SequenceGenerator(name = "marca_produto_sequence", sequenceName = "marca_produto_sequence", allocationSize = 1, initialValue = 1)
 @Data
 public class MarcaProduto  implements Serializable {
-    @Serial
+
     private static final long serialVersionUID = 1L;
 
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator ="seq_marca_produto" )
