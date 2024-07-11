@@ -9,7 +9,7 @@ import java.util.Objects;
 @Data
 @Entity
 @Table(name = "nota_fiscal_compra")
-@SequenceGenerator(name = "nota_fiscal_compra", sequenceName = "nota_fiscal_compra", initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name = "seq_nota_fiscal_compra", sequenceName = "seq_nota_fiscal_compra", initialValue = 1, allocationSize = 1)
 public class NotaFiscalCompra implements Serializable {
     private static final long serialVersionUID = 1L;
 
