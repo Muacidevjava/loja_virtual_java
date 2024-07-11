@@ -17,7 +17,7 @@ public class Produto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_produtos")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_produto")
     private Long id;
 
     @Column(nullable = false)
@@ -32,13 +32,10 @@ public class Produto implements Serializable {
     @Column(columnDefinition = "text", length = 2000, nullable = false)
     private String descricao;
 
-    /** nota item produto associar*/
+    /** Nota item nota produto - ASSOCIAR **/
 
     @Column(nullable = false)
-    private String unidade;
-
-    @Column(nullable = false)
-    private Double peso;
+    private Double peso; /* 1000.55 G */
 
     @Column(nullable = false)
     private Double largura;
@@ -49,24 +46,19 @@ public class Produto implements Serializable {
     @Column(nullable = false)
     private Double profundidade;
 
-     private Boolean produtoAtivo = Boolean.TRUE;
+    @Column(nullable = false)
+    private BigDecimal valorVenda = BigDecimal.ZERO;
 
     @Column(nullable = false)
-    private BigDecimal valorVenda = BigDecimal.ZERO ;
+    private Integer QtdEstoque = 0;
 
+    private Integer QtdeAlertaEstoque = 0;
 
-    @Column(nullable = false)
-   private Integer qtdEstoque = 0;
+    private String linkYoutube;
 
+    private Boolean alertaQtdeEstoque = Boolean.FALSE;
 
-   private Integer qtdAlertaEstoque = 0;
-
-   private String linkYoutube;
-
-
-   private Boolean alertaQtdeEstoque = Boolean.FALSE;
-
-   private  Integer qtdeClique = 0;
+    private Integer qtdeClique = 0;
 
     public Long getId() {
         return id;
@@ -149,19 +141,19 @@ public class Produto implements Serializable {
     }
 
     public Integer getQtdEstoque() {
-        return qtdEstoque;
+        return QtdEstoque;
     }
 
     public void setQtdEstoque(Integer qtdEstoque) {
-        this.qtdEstoque = qtdEstoque;
+        QtdEstoque = qtdEstoque;
     }
 
-    public Integer getQtdAlertaEstoque() {
-        return qtdAlertaEstoque;
+    public Integer getQtdeAlertaEstoque() {
+        return QtdeAlertaEstoque;
     }
 
-    public void setQtdAlertaEstoque(Integer qtdAlertaEstoque) {
-        this.qtdAlertaEstoque = qtdAlertaEstoque;
+    public void setQtdeAlertaEstoque(Integer qtdeAlertaEstoque) {
+        QtdeAlertaEstoque = qtdeAlertaEstoque;
     }
 
     public String getLinkYoutube() {
@@ -186,14 +178,6 @@ public class Produto implements Serializable {
 
     public void setQtdeClique(Integer qtdeClique) {
         this.qtdeClique = qtdeClique;
-    }
-
-    public Boolean getProdutoAtivo() {
-        return produtoAtivo;
-    }
-
-    public void setProdutoAtivo(Boolean produtoAtivo) {
-        this.produtoAtivo = produtoAtivo;
     }
 
     @Override
