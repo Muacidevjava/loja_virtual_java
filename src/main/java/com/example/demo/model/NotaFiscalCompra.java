@@ -1,11 +1,12 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
-
+@Data
 @Entity
 @Table(name = "nota_fiscal_compra")
 @SequenceGenerator(name = "nota_fiscal_compra", sequenceName = "nota_fiscal_compra", initialValue = 1, allocationSize = 1)
@@ -33,7 +34,7 @@ public class NotaFiscalCompra implements Serializable {
     private Pessoa pessoa;
 
     @ManyToOne
-    @JoinColumn(name = "conta_pagar_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "Conta_pagar_fk" ))
+    @JoinColumn(name = "conta_pagar_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "conta_pagar_fk" ))
     private ContaPagar contaPagar;
 
     @Override
