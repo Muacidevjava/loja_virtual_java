@@ -1,9 +1,6 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +22,8 @@ public class FormaPagamento implements Serializable {
     @Id
     @SequenceGenerator(name = "seq_forma_pagamento", sequenceName = "seq_forma_pagamento")
     private Long id;
+
+    @Column(nullable = false)
     private String descricao;
 
 

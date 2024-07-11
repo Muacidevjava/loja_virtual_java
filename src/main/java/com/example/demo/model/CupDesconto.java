@@ -21,13 +21,18 @@ public class CupDesconto implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_cup_desconto")
     private Long id;
 
+    @Column(nullable = false)
     private String codDesc;
+
     private BigDecimal valorDesc;
+
+
     private BigDecimal valorPorcentDesc;
 
     @Temporal(TemporalType.DATE)
     private Date dataValidadeCupom;
 
+    @Column(nullable = false)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

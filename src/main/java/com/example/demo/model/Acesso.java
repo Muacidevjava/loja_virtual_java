@@ -18,6 +18,7 @@ import java.util.Objects;
 @EqualsAndHashCode
 public class Acesso implements GrantedAuthority {
       private static final long SerialVersionUID = 1;
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_acesso")
     private Long id;
