@@ -8,13 +8,13 @@ import java.math.BigDecimal;
 import java.util.Objects;
 @Data
 @Entity
-@Table(name = "nota_fiscal_compra")
-@SequenceGenerator(name = "seq_nota_fiscal_compra", sequenceName = "seq_nota_fiscal_compra", initialValue = 1, allocationSize = 1)
+@Table(name = "nota_fiscal_compr")
+@SequenceGenerator(name = "seq_nota_fiscal_compr", sequenceName = "seq_nota_fiscal_compr", initialValue = 1, allocationSize = 1)
 public class NotaFiscalCompra implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "nota_fiscal_compra")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "nota_fiscal_compr")
     private Long id;
 
     private String numeroNota;
