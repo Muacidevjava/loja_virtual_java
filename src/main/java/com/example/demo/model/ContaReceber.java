@@ -1,11 +1,9 @@
 package com.example.demo.model;
 
 import com.example.demo.enums.StatusContaReceber;
-import com.example.demo.enums.TipoEndereco;
-import jakarta.persistence.*;
 import lombok.Data;
 
-import java.io.Serial;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;

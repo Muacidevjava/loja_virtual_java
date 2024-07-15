@@ -22,7 +22,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 	@Test
 	public void testeCadastraAcesso() {
 		Acesso  acesso = new Acesso();
-		acesso.setDescrição("ROLE_ADMIN");
+		acesso.setDescricao("ROLE_ADMIN");
 
 		acessoService.save(acesso);
 	}

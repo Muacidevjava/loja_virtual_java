@@ -1,12 +1,12 @@
 package com.example.demo.model;
 
-import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -24,11 +24,11 @@ public class Acesso implements GrantedAuthority {
     private Long id;
 
     @Column(nullable = false)
-    private  String descrição; /*Acesso ex: ROLE_ADMIN ou ROLE_SECRETARIO*/
+    private  String descricao; /*Acesso ex: ROLE_ADMIN ou ROLE_SECRETARIO*/
 
     @Override
     public String getAuthority() {
-        return this.descrição;
+        return this.descricao;
     }
 
     public Long getId() {
@@ -39,12 +39,12 @@ public class Acesso implements GrantedAuthority {
         this.id = id;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrição(String descrição) {
-        this.descrição = descrição;
+    public void setDescricao(String descrição) {
+        this.descricao = descrição;
     }
 
     @Override

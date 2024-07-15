@@ -1,9 +1,9 @@
 package com.example.demo.model;
 
 import com.example.demo.enums.TipoEndereco;
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 

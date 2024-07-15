@@ -1,9 +1,9 @@
 package com.example.demo.model;
 
 import com.example.demo.enums.StatusContaPagar;
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
